@@ -4,7 +4,6 @@ import { useRouter } from 'next/router';
 import React, { useEffect, useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Logo from "../public/assets/logo.svg";
 import { registerRoute } from "../utils/APIRoutes";
 
 export default function Register() {
@@ -88,34 +87,33 @@ export default function Register() {
   return (
     <>
       <div className="min-h-screen w-full flex flex-col justify-center items-center gap-1 bg-[#131324]">
-        <form action="" className="flex flex-col gap-16 p-24 bg-[#0A0A14] rounded-xl" onSubmit={(event) => handleSubmit(event)}>
-          <div className="brand">
-            <img src={Logo} alt="logo" />
-            <h1>snappy</h1>
+        <form action="" className="flex flex-col  gap-8 p-24 bg-[#0A0A14] rounded-xl" onSubmit={(event) => handleSubmit(event)}>
+          <div className="text-white text-center text-3xl">
+            Register
           </div>
           <input
-          className="p-1 border-1 border-solid border-[#4e0eff] rounded-sm text-black w-full text-2xl focus:border-[4px] focus:border-[#997af0]"
+          className="p-1 border-1 border-solid border-[#4e0eff] rounded-sm text-black w-full text-xl focus:border-[4px] focus:border-[#997af0]"
             type="text"
             placeholder="Username"
             name="name"
             onChange={(e) => handleChange(e)}
           />
           <input
-          className="p-1 border-1 border-solid border-[#4e0eff] rounded-sm text-black w-full text-2xl focus:border-[4px] focus:border-[#997af0]"
+          className="p-1 border-1 border-solid border-[#4e0eff] rounded-sm text-black w-full text-xl focus:border-[4px] focus:border-[#997af0]"
             type="email"
             placeholder="Email"
             name="email"
             onChange={(e) => handleChange(e)}
           />
           <input
-          className="p-1 border-1 border-solid border-[#4e0eff] rounded-sm text-black w-full text-2xl focus:border-[4px] focus:border-[#997af0]"
+          className="p-1 border-1 border-solid border-[#4e0eff] rounded-sm text-black w-full text-xl focus:border-[4px] focus:border-[#997af0]"
             type="password"
             placeholder="Password"
             name="password"
             onChange={(e) => handleChange(e)}
           />
           <input
-          className="p-1 border-1 border-solid border-[#4e0eff] rounded-sm text-black w-full text-2xl focus:border-[4px] focus:border-[#997af0]"
+          className="p-1 border-1 border-solid border-[#4e0eff] rounded-sm text-black w-full text-xl focus:border-[4px] focus:border-[#997af0]"
             type="password"
             placeholder="Confirm Password"
             name="confirmPassword"
@@ -123,7 +121,7 @@ export default function Register() {
           />
           <button className="text-white bg-[#4e0eff] px-1 py-2 border-none font-bold cursor-pointer rounded-md text-xl uppercase hover:bg-[#4e0eff]" type="submit">Create User</button>
           <span className="text-white uppercase">
-            Already have an account ? <Link href="/login">Login.</Link>
+            Already have an account ? <span className="text-[#4e0eff] font-bold decoration-0"><Link href="/login">Login.</Link></span>
           </span>
         </form>
       </div>
@@ -132,3 +130,4 @@ export default function Register() {
   );
 }
 
+//

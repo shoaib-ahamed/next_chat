@@ -4,7 +4,6 @@ import { useRouter } from 'next/router';
 import React, { useEffect, useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Logo from "../public/assets/logo.svg";
 import { loginRoute } from "../utils/APIRoutes";
 
 export default function Login() {
@@ -74,11 +73,10 @@ export default function Login() {
       <div className="min-h-screen w-full flex flex-col justify-center items-center gap-1 bg-[#131324] ">
         <form action="" className="flex flex-col gap-16 p-24 bg-[#0A0A14] rounded-xl" onSubmit={(event) => handleSubmit(event)}>
           <div className="flex justify-center items-center gap-1">
-            <img src={Logo} className="h-5" alt="logo" />
-            <h1 className="text-white uppercase">snappy</h1>
+            <div className="text-white text-3xl">Log In</div>
           </div>
           <input
-            className="p-1 border-1 border-solid border-[#4e0eff] rounded-sm text-black w-full text-2xl focus:border-[4px] focus:border-[#997af0]"
+            className="p-1 border-1 border-solid border-[#4e0eff] rounded-sm text-black w-full text-xl focus:border-[4px] focus:border-[#997af0]"
             type="text"
             placeholder="Email"
             name="email"
@@ -94,7 +92,7 @@ export default function Login() {
           />
           <button className="text-white bg-[#4e0eff] px-1 py-2 border-none font-bold cursor-pointer rounded-md text-xl uppercase hover:bg-[#4e0eff]" type="submit">Log In</button>
           <span className="text-white uppercase">
-            Dont have an account ? <Link className="text-[#4e0eff] font-bold decoration-0" href="/register">Create One.</Link>
+            Dont have an account ?<span className="text-[#4e0eff] font-bold decoration-0"> <Link  href="/register">Create One.</Link></span>
           </span>
         </form>
       </div>
