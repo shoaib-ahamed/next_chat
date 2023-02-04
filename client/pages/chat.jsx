@@ -11,7 +11,6 @@ import { allUsersRoute, host } from '../utils/APIRoutes';
 
 
 export default function Chat() {
-  // const navigate = useNavigate();
   const router = useRouter();
 
   const socket = useRef();
@@ -70,12 +69,4 @@ export default function Chat() {
 
 
 
-// export async function getStaticProps(){
-    
-//   const res = await fetch(allUsersRoute)
-//   console.log(res.data)
-      
-//   return {
-//     props: { users: res.data },
-//   }
-// }
+
