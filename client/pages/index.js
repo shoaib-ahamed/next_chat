@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Layout from "../components/Layout";
+import Layout from "../layout/layout";
 import styles from "../styles/Home.module.css";
 
 const Home = () => {

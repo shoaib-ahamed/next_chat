@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import { recieveMessageRoute, sendMessageRoute } from '../utils/APIRoutes';
 import ChatInput from "./ChatInput";
-import Logout from "./Logout";
+import Logout from './Logout';
 
 export default function ChatContainer({currentUser, currentChat, socket }) {
   const [messages, setMessages] = useState([]);
@@ -37,8 +37,6 @@ export default function ChatContainer({currentUser, currentChat, socket }) {
     };
     getCurrentChat();
   }, [currentChat]);
-
-  // console.log(currentChat);
 
   const handleSendMsg = async (msg) => {
     socket.current.emit("send-msg", {
@@ -77,16 +75,13 @@ export default function ChatContainer({currentUser, currentChat, socket }) {
 
   return (
     <div className='flex flex-col overflow-y-auto w-full md:w-[80vw] gap-4 justify-around text-white text-xl p-5'>
-      <div className="flex justify-between items-center py-2">
+      <div className="flex justify-between items-center p-2 rounded-lg bg-[#303058]">
         <div className="flex items-center gap-1">
-          <div className="avatar">
-            <img
-              src={`data:image/svg+xml;base64,${currentChat.avatarImage}`}
-              alt=""
-            />
-          </div>
-          <div className="text-white">
-            <h3>{currentChat.username}</h3>
+          {/* <div className="avatar">
+            image---->
+          </div> */}
+          <div className="text-black">
+            <h3 className='px-4'>{currentChat.name}</h3>
           </div>
         </div>
         <Logout currentUser={currentUser} />

@@ -55,10 +55,13 @@ export default function Login() {
       if (data.status === false) {
         toast.error(data.msg, toastOptions);
       }
+
+      const {name,_id} = data.user
+      
       if (data.status === true) {
         localStorage.setItem(
           "CurrentUser",
-          JSON.stringify(data.user)
+          JSON.stringify({name: name , _id: _id , email: email})
         );
 
         router.push("/chat");

@@ -28,7 +28,7 @@ export default function Chat() {
       )
       setCurrentUser(data)
     }
-  }, []);
+  }, [router]);
 
   useEffect(() => {
     if (currentUser) {
@@ -58,7 +58,7 @@ export default function Chat() {
         <div className='flex flex-col md:flex-row'>
           <Contacts  currentUser={currentUser} contacts={contacts} changeChat={handleChatChange} />
           {currentChat === undefined ? (
-            <Welcome s />
+            <Welcome/>
           ) : (
             <ChatContainer currentUser={currentUser} currentChat={currentChat} socket={socket} />
           )}
