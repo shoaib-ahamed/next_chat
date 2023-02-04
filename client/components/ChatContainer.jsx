@@ -22,9 +22,6 @@ export default function ChatContainer({currentUser, currentChat, socket }) {
 
     getAllRecievedMessages()
   }, [currentChat, currentUser]);
-
-  console.log(messages)
-
   
 
   useEffect(() => {
@@ -63,7 +60,6 @@ export default function ChatContainer({currentUser, currentChat, socket }) {
     }
   }, [socket]);
 
-  console.log(arrivalMessage)
 
   useEffect(() => {
     arrivalMessage && setMessages((prev) => [...prev, arrivalMessage]);
