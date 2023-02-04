@@ -48,7 +48,7 @@ export default function Contacts({ contacts, changeChat , currentUser }) {
           <div className="flex items-center justify-center gap-2 bg-[#0d0d30]">
             <div className="flex md:flex-col gap-4">
               <h2 className="text-green-700">you are {currentUserName}</h2>
-              <Logout/>
+              <Logout currentUser={currentUser}/>
             </div>
           </div>
         </div>
