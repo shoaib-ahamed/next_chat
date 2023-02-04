@@ -61,13 +61,13 @@ module.exports.setAvatar = async (req, res, next) => {
       userId,
       {
         isAvatarImageSet: true,
-        avatarImage,
+        image,
       },
       { new: true }
     );
     return res.json({
       isSet: userData.isAvatarImageSet,
-      image: userData.avatarImage,
+      image: userData.image,
     });
   } catch (ex) {
     next(ex);
